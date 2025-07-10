@@ -1,8 +1,10 @@
 import { WebSocketServer, WebSocket } from "ws";
 
-const wss = new WebSocketServer({ port: 8081 });
+const PORT = +(process.env.PORT || 8081);
 
-console.log("WebSocket server started at ws://localhost:8081");
+const wss = new WebSocketServer({ port: PORT });
+console.log(`✅ WebSocket server started at ws://0.0.0.0:${PORT}`);
+
 
 const rooms = new Map<string, Set<WebSocket>>();
 
