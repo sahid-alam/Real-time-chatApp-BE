@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc -b && node ./dist/new.js"
+  "build": "tsc -b",
+  "start": "node ./dist/new.js",
+  "dev": "tsc -b && node ./dist/new.js"
   },
   "keywords": [],
   "author": "",
